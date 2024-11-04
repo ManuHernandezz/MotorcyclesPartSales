@@ -33,7 +33,8 @@ Create a query to return product_line, the month from date, displayed as 'June',
 
 
 ### QUERY
-    
+```sql
+
     SELECT product_line,
 		  CASE 
 		  WHEN EXTRACT (MONTH from DATE ) = 6 THEN 'June'
@@ -46,6 +47,7 @@ Create a query to return product_line, the month from date, displayed as 'June',
     WHERE client_type = 'Wholesale'
     GROUP BY product_line, EXTRACT(MONTH from date), warehouse
     ORDER BY product_line DESC, Month ASC, net_revenue DESC;
+```
 
 | product_line | month | warehouse | net_revenue |
 |--------|-----------|-------------|-------------|
